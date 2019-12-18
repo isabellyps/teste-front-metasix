@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 $corazul: #0168B4;
 
 $corpreto: #303030;
@@ -11,6 +13,6 @@ $corbranco: #FFF;
 
 body {
     background-color: #FAFAFA;
-    font-family: 'Roboto' !important;
+    font-family: 'Roboto', sans-serif;
 }
 

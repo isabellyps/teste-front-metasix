@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-bv-faq',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BvFaqComponent implements OnInit {
 
-  constructor() { }
+  faSearch = faSearch;
+  faEdit = faEdit;
+  faTrash = faTrash;
+
+  constructor(private http : HttpClient) {}
 
   ngOnInit() {
   }
