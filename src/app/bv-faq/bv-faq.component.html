@@ -10,45 +10,23 @@
      </div>
  </div >
  
-
  <table> 
      <thead>
          <tr > 
              <th>Pergunta</th>
-             <th>Nova Pergunta</th>
+             <th><fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta</th>
              <th>Ordem</th>
              <th>Editar</th>
              <th>Excluir</th>
          </tr>
      </thead>
      <tbody>
-         <tr>
-             <td>Como posso ser atendido no Aplicativo Boa Vista</td>
+         <tr *ngFor='let faq of bvFaq'>
+             <td>{{faq.answer}}</td>
              <td></td>
-             <td>1</td>
+             <td>{{faq.position}}</td>
              <td><fa-icon [icon]="faEdit" class="editar"></fa-icon></td>
              <td><fa-icon [icon]="faTrash" class="excluir"></fa-icon></td>
-         </tr>
-         <tr>
-             <td>Onde encontro as informações sobre os serviços?</td>
-             <td></td>
-             <td>2</td>
-             <td>editar</td>
-             <td>excluir</td>
-         </tr>
-         <tr>
-             <td>Como o guia de serviços está estruturado?</td>
-             <td></td>
-             <td>3</td>
-             <td>editar</td>
-             <td>excluir</td>
-         </tr>
-         <tr>
-             <td>O que é o Guia de Serviços da Prefeitura de Boa Vista?</td>
-             <td></td>
-             <td>4</td>
-             <td>editar</td>
-             <td>excluir</td>
          </tr>
      </tbody>
  </table>

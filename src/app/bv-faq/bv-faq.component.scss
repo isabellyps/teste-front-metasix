@@ -42,12 +42,14 @@ table {
 
 table thead {
     background-color: $corazul;
-
+    color: $corbranco;
+    text-align: justify;
+    font-weight: regular;
 }
 
 table td {
     border-radius: 5px;
-    text-align: center;
+
 }
 
 table, nav {

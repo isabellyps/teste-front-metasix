@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { BvHeaderComponent } from './bv-header/bv-header.component';
 import { BvFaqComponent } from './bv-faq/bv-faq.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BvCategoriasComponent } from './bv-categorias/bv-categorias.component';
+import { BvLocaisComponent } from './bv-locais/bv-locais.component';
+import { BvHomeComponent } from './bv-home/bv-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BvHeaderComponent,
-    BvFaqComponent
+    BvFaqComponent,
+    BvCategoriasComponent,
+    BvLocaisComponent,
+    BvHomeComponent
   ],
   imports: [
     BrowserModule,

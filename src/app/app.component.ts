@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,8 +7,5 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'faq-boa-vista';
-
-  faPlusCircle = faPlusCircle;
 }
 
-//<fa-icon [icon]="faCoffee"></fa-icon>
