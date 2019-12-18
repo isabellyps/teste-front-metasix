@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faTh } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-bv-header',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bv-header.component.scss']
 })
 export class BvHeaderComponent implements OnInit {
+
+  faTh = faTh;
+  faSignOutAlt = faSignOutAlt;
 
   constructor() { }
 

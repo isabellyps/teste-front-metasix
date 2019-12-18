@@ -5,34 +5,47 @@
     background-color: $corazul;
 } 
 
-.logo {
-    background-image: url("../../assets/images/logo.png");
-    background-repeat: no-repeat;
+.logo img {
     display: block;
-    width: 600px;
-    height: 150px;
-    text-indent: -9999px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    padding: 15px 0px 0px 25px;
 }
 
 .menu-principal__lista {
     padding: 0;
+    display: -webkit-flex;
+    list-style: none;
+
 }
 
 .menu-principal__item {
-    text-decoration: none;
-    margin-bottom: 20px;
+    margin-right: 10px;
     border-radius: 5px;
-    list-style: none;
-
+    padding: 5px 10px 5px 10px;
+    box-shadow: rgb(199, 199, 199) 1px 1px 3px 3px
 }
 
 .menu-principal__item--atual {
     background-color: $corazul;
     color: $corbranco;
-    font-weight: bold;
 }
 
-a:link  {
+a {
     text-decoration: none;
     color: $corpreto;
+}
+
+.modulo {
+    display: contents;
+    float: left;
+    color: $corbranco;
+}
+
+.logout {
+    display: contents;
+    float: left;
+    color: $corbranco;
 }

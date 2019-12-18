@@ -1,23 +1,21 @@
-<header>
     <div class="cabecalho">
-        <h1 class="logo">Prefeitura Boa Vista</h1>
-        <div>Módulos</div>
-        <div>LogOut</div>
+        <h1 class="logo"><img src="../../assets/images/logo.png" alt="logo-boa-vista"></h1>
+        <div class="modulo"><fa-icon [icon]="faTh"></fa-icon><br>Módulos</div>
+        <div class="logout"><fa-icon [icon]="faSignOutAlt"></fa-icon>LogOut</div>
     </div>
     <nav>
         <ul class="menu-principal__lista">
             <li>
-                <button class="menu-principal__item"><a href="/#">HOME</a></button>
+                <a class="menu-principal__item" href="/#">HOME</a>
             </li>
             <li>
-                <button class="menu-principal__item menu-principal__item--atual"><a href="/#">FAQ</a></button>
-            </li>
-            <li class="menu-principal__item">
-                <button class="menu-principal__item"><a href="/#">LOCAIS</a></button>
+                <a class="menu-principal__item menu-principal__item--atual" href="/#">FAQ</a>
             </li>
             <li>
-                <button class="menu-principal__item"><a href="/#">CATEGORIAS</a></button>
+                <a class="menu-principal__item" href="/#">LOCAIS</a>
+            </li>
+            <li>
+                <a class="menu-principal__item" href="/#">CATEGORIAS</a>
             </li>
         </ul>
     </nav>
-</header>

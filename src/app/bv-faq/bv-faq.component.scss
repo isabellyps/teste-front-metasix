@@ -1,5 +1,40 @@
 @import '../../styles.scss';
 
+div {
+    display: -webkit-box;
+}
+
+h1 {
+    margin: auto 0;
+}
+
+input {
+    margin: 11px 9px 0px 110px;
+    border-color: gray;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px; 
+    padding: 5px 8px 5px 5px;
+    font-style: italic;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(10, 10, 10, 0.383);
+ }
+  
+ :-moz-placeholder { /* Firefox 18- */
+    color: rgba(10, 10, 10, 0.383); 
+ }
+  
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(10, 10, 10, 0.383);  
+ }
+  
+ :-ms-input-placeholder {  
+    color: rgba(10, 10, 10, 0.383);
+ }
+
+
 table {
     width: 100%;
 }
@@ -10,10 +45,11 @@ table thead {
 }
 
 table td {
-    border: 1px solid;
+    border-radius: 5px;
 }
 
-h1, table, nav {
+table, nav {
     font-family: Arial;
     padding: 10px;
 }
+
