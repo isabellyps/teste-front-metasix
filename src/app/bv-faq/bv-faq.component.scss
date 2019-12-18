@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+
+table {
+    width: 100%;
+}
+
+table thead {
+    background-color: $corazul;
+
+}
+
+table td {
+    border: 1px solid;
+}
+
+h1, table, nav {
+    font-family: Arial;
+    padding: 10px;
+}

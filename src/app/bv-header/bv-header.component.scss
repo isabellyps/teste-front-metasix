@@ -1,0 +1,38 @@
+@import '../../styles.scss';
+
+.cabecalho {
+    width: 100%;
+    background-color: $corazul;
+} 
+
+.logo {
+    background-image: url("../../assets/images/logo.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 600px;
+    height: 150px;
+    text-indent: -9999px;
+}
+
+.menu-principal__lista {
+    padding: 0;
+}
+
+.menu-principal__item {
+    text-decoration: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    list-style: none;
+
+}
+
+.menu-principal__item--atual {
+    background-color: $corazul;
+    color: $corbranco;
+    font-weight: bold;
+}
+
+a:link  {
+    text-decoration: none;
+    color: $corpreto;
+}
