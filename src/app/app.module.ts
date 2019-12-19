@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BvCategoriasComponent } from './bv-categorias/bv-categorias.component';
 import { BvLocaisComponent } from './bv-locais/bv-locais.component';
 import { BvHomeComponent } from './bv-home/bv-home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BvHomeComponent } from './bv-home/bv-home.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

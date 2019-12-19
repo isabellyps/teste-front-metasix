@@ -11,8 +11,10 @@ $corvermelho: #DC3545;
 
 $corbranco: #FFF;
 
+$corborda: rgb(199, 199, 199);
+
 body {
-    background-color: #FAFAFA;
+    background-color: $corbranco;
     font-family: 'Roboto', sans-serif;
 }
 

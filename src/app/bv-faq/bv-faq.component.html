@@ -13,18 +13,16 @@
  <table> 
      <thead>
          <tr > 
-             <th>Pergunta</th>
-             <th><fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta</th>
-             <th>Ordem</th>
-             <th>Editar</th>
-             <th>Excluir</th>
+             <th>Pergunta<span><fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta</span></th>
+             <th class="colcenter">Ordem</th>
+             <th class="colcenter">Editar</th>
+             <th class="colcenter">Excluir</th>
          </tr>
      </thead>
      <tbody>
          <tr *ngFor='let faq of bvFaq'>
-             <td>{{faq.answer}}</td>
-             <td></td>
-             <td>{{faq.position}}</td>
+             <td>{{faq.question}}</td>
+             <td class="colcenter">{{faq.position}}</td>
              <td><fa-icon [icon]="faEdit" class="editar"></fa-icon></td>
              <td><fa-icon [icon]="faTrash" class="excluir"></fa-icon></td>
          </tr>

@@ -43,13 +43,14 @@ table {
 table thead {
     background-color: $corazul;
     color: $corbranco;
-    text-align: justify;
-    font-weight: regular;
+    text-align: center;
 }
 
 table td {
-    border-radius: 5px;
-
+    border-radius: 1px;
+    padding: 1px;
+    box-shadow: $corborda 0px 0px 0px 0.5px;
+    text-align: center;
 }
 
 table, nav {
@@ -65,6 +66,7 @@ table, nav {
     margin-top: 25px;
 }
 
+
 .ng-fa-icon {
     padding-right: 10px;
 }
@@ -77,4 +79,8 @@ table, nav {
 .excluir {
     color: $corvermelho;
     position: center;
+}
+
+span {
+    float: right;
 }

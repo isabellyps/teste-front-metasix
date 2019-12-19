@@ -17,20 +17,20 @@
 nav {
     margin-top: 36px;
     padding-left: 15px;
+    margin-top: 36px;;
 }
 
 .menu-principal__lista {
     padding: 0;
     display: -webkit-flex;
     list-style: none;
-
 }
 
 .menu-principal__item {
     margin-right: 10px;
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
-    box-shadow: rgb(199, 199, 199) 1px 1px 3px 3px
+    box-shadow: $corborda 1px 1px 3px 3px
 }
 
 .menu-principal__item--atual {
@@ -53,8 +53,4 @@ a {
     display: contents;
     float: left;
     color: $corbranco;
-}
-
-nav {
-    margin-top: 36px;;
 }
