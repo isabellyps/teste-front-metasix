@@ -1,29 +1,30 @@
- <div >
-     <div>
+ <div class="row">
+     <div class="col-md-7"> 
         <h2>FAQ - Perguntas Frequentes</h2>
      </div>
-     <div>
-        <input type="burcar-termo" placeholder="Busque por termo...">
+     <div class="col-md-3">
+        <input class="form-control mr-sm-2" type="search" placeholder="Busque por termo...">
     </div>
-    <div>
-        <button class="buscar"><fa-icon [icon]="faSearch"></fa-icon>BUSCAR</button>   
+    <div class="col-md-2">
+        <button class="buscar" type="submit"><fa-icon [icon]="faSearch"></fa-icon>BUSCAR</button>   
      </div>
- </div >
+ </div>
  
- <table> 
+ <table class="table table-striped"> 
      <thead>
-         <tr > 
-             <th>Pergunta<span><fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta</span></th>
-             <th class="colcenter">Ordem</th>
-             <th class="colcenter">Editar</th>
-             <th class="colcenter">Excluir</th>
+         <tr> 
+             <th scope="col">Pergunta<span><fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta</span></th>
+             <th scope="col">Ordem</th>
+             <th scope="col">Editar</th>
+             <th scope="col">Excluir</th>
          </tr>
      </thead>
      <tbody>
          <tr *ngFor='let faq of bvFaq'>
-             <td>{{faq.question}}</td>
-             <td class="colcenter">{{faq.position}}</td>
-             <td><fa-icon [icon]="faEdit" class="editar"></fa-icon></td>
+             <td scope="row">{{faq.question}}</td>
+             <td scope="row">{{faq.position}}</td>
+             <td><button onclick="deletar()"></button><fa-icon [icon]="faEdit" class="editar"></fa-icon></td>
+                <!-- <fa-icon [icon]="faEdit" class="editar" (click)="deletar()"></fa-icon></td> -->
              <td><fa-icon [icon]="faTrash" class="excluir"></fa-icon></td>
          </tr>
      </tbody>

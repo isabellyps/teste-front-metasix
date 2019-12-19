@@ -6,12 +6,34 @@
 } 
 
 .logo img {
-    display: block;
     max-width:200px;
     max-height:150px;
     width: auto;
     height: auto;
     padding: 15px 0px 0px 25px;
+}
+
+.logo {
+    display: inline-flex;
+}
+
+.modulo {
+    //flex: 0 0 auto;
+    //justify-content: flex-end;
+    //display: flex;
+    color: $corbranco;
+    //display: grid;
+    text-align: center;
+    position: relative;
+}
+
+.logout {
+    //flex: 0 0 auto;
+    //justify-content: flex-end;
+    ///display: grid;
+    color: $corbranco;
+    position: relative;
+    text-align: center
 }
 
 nav {
@@ -41,16 +63,4 @@ nav {
 a {
     text-decoration: none;
     color: $corpreto;
-}
-
-.modulo {
-    display: contents;
-    float: left;
-    color: $corbranco;
-}
-
-.logout {
-    display: contents;
-    float: left;
-    color: $corbranco;
 }
