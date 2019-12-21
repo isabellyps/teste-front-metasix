@@ -2,25 +2,32 @@
 
 <div>
     <label for="objectId">Id: 
-        <!-- deixar não editavel -->
-        <input type="text" placeholder="Id" id="objectId">
+        <input type="text" placeholder="Id" [(ngModel)]="faq.objectId" id="objectId" disabled>
     </label>
+    <br>
     <label for="position">Posição: 
-        <input type="number" id="position">
+        <input type="number" [(ngModel)]="faq.position" id="position">
     </label>
-    <label for="answer">Resposta: 
-        <input type="text" id="answer">
+    <br>
+    <label for="group">Grupo: 
+        <input type="text" [(ngModel)]="faq.group" id="group">
     </label>
-    <label for="group">Id: 
-        <input type="text" id="group">
+    <br>
+    <label for="question">Pergunta: 
+        <input type="text" [(ngModel)]="faq.question" id="question"s>
     </label>
-    <label for="question">Id: 
-        <input type="text" id="question">
+    <br>
+    <label for="answer">Resposta:
+        <textarea id="answer" cols="50" rows="5" [(ngModel)]="faq.answer" ></textarea>
     </label>
-    <label for="approved">Id: 
-        <input type="boolean" id="approved">
+    <br>
+    <label for="approved">Aprovado: 
+        <input type="text" [(ngModel)]="faq.approved" id="approved">
     </label>
-    <label for="visible">Id: 
-        <input type="boolean" id="visible">
+    <br>
+    <label for="visible">Visível: 
+        <input type="text" [(ngModel)]="faq.visible" id="visible">
     </label>
+    <br>
+    <button type="button" class="btn btn-success" >Editar</button>
 </div>

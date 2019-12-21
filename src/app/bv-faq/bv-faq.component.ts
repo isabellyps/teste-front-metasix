@@ -5,6 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FaqService } from './faq.service';
 import { BvFaq } from './faq.model';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bv-faq',
@@ -22,7 +23,7 @@ export class BvFaqComponent implements OnInit {
 
   bvFaq: BvFaq[];
 
-  constructor(private faqService: FaqService) { }
+  constructor(private faqService: FaqService, private router: Router) { }
 
   ngOnInit() {
     //result api
@@ -61,8 +62,9 @@ export class BvFaqComponent implements OnInit {
     });
   }
 
-
-
-
+  //função para editar - passa bvfaq para a rota
+  editar (faq: BvFaq) {
+    this.router.navigate(['/faq/editar'], { queryParams: faq });
+  }
 }
 
