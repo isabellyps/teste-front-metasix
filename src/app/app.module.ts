@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { BvCategoriasComponent } from './bv-categorias/bv-categorias.component';
 import { BvLocaisComponent } from './bv-locais/bv-locais.component';
 import { BvHomeComponent } from './bv-home/bv-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BvFaqEditarComponent } from './bv-faq-editar/bv-faq-editar.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BvFaqComponent,
     BvCategoriasComponent,
     BvLocaisComponent,
-    BvHomeComponent
+    BvHomeComponent,
+    BvFaqEditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

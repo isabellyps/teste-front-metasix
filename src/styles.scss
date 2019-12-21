@@ -1,19 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+//cor
 $corazul: #0168B4;
-
 $corpreto: #303030;
-
 $corcinza: #707070;
-
 $corvermelho: #DC3545;
-
 $corbranco: #FFF;
-
 $corborda: rgb(199, 199, 199);
-
 $corfundo: #FAFAFA;
+
+//breakpoint
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
 
 body {
     background-color: $corfundo;

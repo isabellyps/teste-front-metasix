@@ -1,92 +1,111 @@
 @import '../../styles.scss';
 
 div {
-    display: -webkit-box;
-    padding: 15px;
+    margin-bottom: 5px; 
+    padding: 0px 22px 0px 22px;
+
+    h2 {
+    font-size: 19px;
+    font-weight: bold;
+    }
+
+    .buscar {
+        display: inline-flex;
+        height: 30px;
+    }
+
+    input {
+        border-color: $corborda;
+        border-style: solid;
+        border-width: thin;
+        border-radius: 9px; 
+        padding: 7px 8px 7px 5px;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: italic;
+        display: inline-flex;
+        width: 219px;
+    
+        ::-webkit-input-placeholder {
+            color:$corborda;
+         }
+         
+         :-moz-placeholder { /* Firefox 18- */
+           color:$corborda; 
+         }
+         
+         ::-moz-placeholder {  /* Firefox 19+ */
+           color: $corborda;  
+         }
+         
+         :-ms-input-placeholder {  
+           color: $corborda;
+         }
+    }
+    
+    button {
+       background-color: $corazul;
+       color: $corbranco;
+       padding: 8px 7px 8px 7px;
+       border-radius: 9px;
+       border-width: 0;
+       display: inline-flex;
+       font-size: 11px;
+    }
 }
 
-h1 {
-    margin: auto 0;
-}
-
-input {
-    //margin: 25px -20px 0px 105px;
-    border-color: gray;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 5px; 
-    padding: 7px 8px 7px 5px;
-    font-style: italic;
-}
-
-::-webkit-input-placeholder {
-    color:gray;
- }
-  
- :-moz-placeholder { /* Firefox 18- */
-    color:gray; 
- }
-  
- ::-moz-placeholder {  /* Firefox 19+ */
-    color: gray;  
- }
-  
- :-ms-input-placeholder {  
-    color: gray;
-}
-
- .buscar {
-    background-color: $corazul;
-    color: $corbranco;
-    padding: 7px 7px 7px 7px;
-    border-radius: 5px;
-    border-width: 0;
-    //margin-top: 25px;
-}
-
-
-table {
+ table {
     width: 95%;
     margin-left: 27px;
-    border-collapse: initial;
-}
-
-table thead {
-    background-color: $corazul;
-    color: $corbranco;
-    // text-align: center;
-    border-bottom: 8px solid $corfundo;
-}
-
-table th {
+    border-collapse: separate;
     
+
+    thead {
+        background-color: $corazul;
+        color: $corbranco;
+        font-size: 13px;
+    }
+
+    th {
+        padding: 4px 15px 4px 15px;
+    }
+
+    td {
+        background-color: $corbranco;
+        padding: 5px 15px 5px 15px;
+        border: none;
+        border-radius: 2px;
+        box-shadow: $corborda 0px 0px 0px 0.5px;
+        font-size: 12px;
+    }
+
+    span {
+        float: right;
+    }
+
+    .editar {
+        color: $corazul;
+        position: center;
+        text-align: center;
+    }
+
+    .deletar {
+        color: $corvermelho;
+        position: center;
+    }
+
+    .deletar-btn {
+        border: none;
+        background-color: $corbranco;
+        text-align: center;
+    }
+
+    .ordem {
+        font-weight: bold;
+    }
 }
 
-table td {
-    background-color: $corbranco;
-    border-radius: 2px;
-    margin-top: 2px;
-    padding: 2px;
-    box-shadow: $corborda 0px 0px 0px 0.5px;
-    // text-align: center;
-
+.ng-fa-icon {
+    padding-right: 10px;
 }
 
-// .ng-fa-icon {
-//     padding-right: 10px;
-// }
-
-.editar {
-    color: $corazul;
-    position: center;
-    text-align: center;
-}
-
-.excluir {
-    color: $corvermelho;
-    position: center;
-}
-
-span {
-    float: right;
-}

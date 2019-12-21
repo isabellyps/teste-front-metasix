@@ -1,31 +1,37 @@
- <div class="row">
-     <div class="col-md-7"> 
+<div class="row">
+    <div class="col-md-9">
         <h2>FAQ - Perguntas Frequentes</h2>
-     </div>
-     <div class="col-md-3">
-        <input class="form-control mr-sm-2" type="search" placeholder="Busque por termo...">
     </div>
-    <div class="col-md-2">
-        <button class="buscar" type="submit"><fa-icon [icon]="faSearch"></fa-icon>BUSCAR</button>   
-     </div>
- </div>
- 
- <table class="table table-striped"> 
-     <thead>
-         <tr> 
-             <th scope="col">Pergunta<span><fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta</span></th>
-             <th scope="col">Ordem</th>
-             <th scope="col">Editar</th>
-             <th scope="col">Excluir</th>
-         </tr>
-     </thead>
-     <tbody>
-         <tr *ngFor='let faq of bvFaq'>
-             <td scope="row">{{faq.question}}</td>
-             <td scope="row">{{faq.position}}</td>
-             <td><button onclick="deletar()"></button><fa-icon [icon]="faEdit" class="editar"></fa-icon></td>
-                <!-- <fa-icon [icon]="faEdit" class="editar" (click)="deletar()"></fa-icon></td> -->
-             <td><fa-icon [icon]="faTrash" class="excluir"></fa-icon></td>
-         </tr>
-     </tbody>
- </table>
+    <div class="buscar col-md-3 text-right">
+        <input class="form-control mr-sm-2" type="search" placeholder="Busque por termo..." 
+            [(ngModel)]="modelFiltroFaq">
+        <button type="button" (click)="buscar()" class="text-center">
+            <fa-icon [icon]="faSearch"></fa-icon>BUSCAR
+        </button>
+    </div>
+</div>
+
+<table class="table-responsive-sm">
+    <thead>
+        <tr>
+            <th class="rounded-left" scope="col">Pergunta<span>
+                    <fa-icon [icon]="faPlusCircle"></fa-icon>Nova Pergunta
+                </span></th>
+            <th scope="col" class="text-center">Ordem</th>
+            <th scope="col" class="text-center">Editar</th>
+            <th scope="col" class="text-center rounded-right">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let faq of buscar()'>
+            <td scope="row">{{faq.question}}</td>
+            <td scope="row" class="text-center ordem">{{faq.position}}</td>
+            <td class="text-center">
+                <fa-icon [icon]="faEdit" class="editar"></fa-icon>
+            </td>
+            <td class="text-center"><button class="deletar-btn" (click)="deletar(faq)">
+                    <fa-icon [icon]="faTrash" class="deletar"></fa-icon>
+                </button></td>
+        </tr>
+    </tbody>
+</table>

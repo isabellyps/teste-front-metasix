@@ -1,66 +1,71 @@
 @import '../../styles.scss';
 
 .cabecalho {
-    width: 100%;
-    background-color: $corazul;
-} 
-
-.logo img {
-    max-width:200px;
-    max-height:150px;
     width: auto;
-    height: auto;
-    padding: 15px 0px 0px 25px;
+    background-color: $corazul;
+    height: 90px;
+    .logo {
+        display: inline-flex;
+        img {
+            max-width:200px;
+            max-height:150px;
+            width: auto;
+            height: auto;
+            padding: 15px 0px 0px 25px;
+        }
+    }
+    
+    .modulo {
+        color: $corbranco;
+        padding: 15px 0px 15px 0px;
+        text-align: center;
+        position: relative;
+    }
+    .logout {
+        padding: 15px 0px 15px 0px;
+        color: $corbranco;
+        text-align: center;
+        position: relative;
+    } 
 }
 
-.logo {
-    display: inline-flex;
-}
+.modulo, .logout :hover {
+    cursor: pointer;
+  }
 
-.modulo {
-    //flex: 0 0 auto;
-    //justify-content: flex-end;
-    //display: flex;
-    color: $corbranco;
-    //display: grid;
-    text-align: center;
-    position: relative;
-}
-
-.logout {
-    //flex: 0 0 auto;
-    //justify-content: flex-end;
-    ///display: grid;
-    color: $corbranco;
-    position: relative;
-    text-align: center
-}
 
 nav {
-    margin-top: 36px;
-    padding-left: 15px;
-    margin-top: 36px;;
-}
+    margin: 35px auto;
+    padding-left: 30px;
+    font-size: 12px;
 
-.menu-principal__lista {
-    padding: 0;
-    display: -webkit-flex;
-    list-style: none;
 }
+    .menu-principal__lista {
+        padding: 0;
+        display: -webkit-flex;
+        list-style: none;
+    }
 
-.menu-principal__item {
-    margin-right: 10px;
-    border-radius: 5px;
-    padding: 5px 10px 5px 10px;
-    box-shadow: $corborda 1px 1px 3px 3px
-}
+    .menu-principal__item {
+        margin-right: 20px;
+        border-radius: 5px;
+        padding: 5px 10px 5px 10px;
+        box-shadow: $corborda 1px 1px 3px 1px;
+        color: $corcinza
+    }
+    
+    .menu-principal__item--atual {
+        background-color: $corazul;
+        color: $corbranco;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $corpreto;
+    }
 
-.menu-principal__item--atual {
-    background-color: $corazul;
-    color: $corbranco;
-}
-
-a {
-    text-decoration: none;
-    color: $corpreto;
-}
+@media(max-width: $breakpoint-sm) {
+    .cabecalho {
+        height: 225px;
+    }
+} 

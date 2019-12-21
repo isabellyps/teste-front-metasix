@@ -1,24 +1,23 @@
-    <div class="cabecalho row">
-        <div class="col-md-10">
-            <h1 class="logo"><img src="../../assets/images/logo.png" alt="logo-boa-vista"></h1>
-        </div>
-        <div class="modulo col-md-1"><fa-icon [icon]="faTh"></fa-icon><br>Módulos</div>
-            <!-- <fa-icon [icon]="faSignOutAlt"></fa-icon><br>LogOut</div> -->
-        <div class="logout col-md-1"><fa-icon [icon]="faSignOutAlt"></fa-icon><br>LogOut</div>
+<div class="cabecalho row">
+    <div class="col-xs-2 col-sm-8 col-md-10">
+        <h1 class="logo"><img src="../../assets/images/logo.png" alt="logo-boa-vista"></h1>
     </div>
-    <nav>
-        <ul class="menu-principal__lista">
-            <li>
-                <a class="menu-principal__item" href="/home">HOME</a>
-            </li>
-            <li>
-                <a class="menu-principal__item menu-principal__item--atual" href="/faq">FAQ</a>
-            </li>
-            <li>
-                <a class="menu-principal__item" href="/locais">LOCAIS</a>
-            </li>
-            <li>
-                <a class="menu-principal__item" href="/categorias">CATEGORIAS</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="modulo col-xs-1 col-sm-2 col-md-1"><fa-icon [icon]="faTh"></fa-icon><br>Módulos</div>
+    <div class="logout col-xs-1 col-sm-1 col-md-1"><fa-icon [icon]="faSignOutAlt"></fa-icon><br>LogOut</div>
+</div>
+<nav>
+    <ul class="menu-principal__lista">
+        <li>
+            <a routerLinkActive="menu-principal__item--atual" class="menu-principal__item" routerLink="/home">HOME</a>
+        </li>
+        <li>
+            <a routerLinkActive="menu-principal__item--atual" class="menu-principal__item" routerLink="/faq">FAQ</a>
+        </li>
+        <li>
+            <a routerLinkActive="menu-principal__item--atual" class="menu-principal__item" routerLink="/locais">LOCAIS</a>
+        </li>
+        <li>
+            <a routerLinkActive="menu-principal__item--atual" class="menu-principal__item" routerLink="/categorias">CATEGORIAS</a>
+        </li>
+    </ul>
+</nav>

@@ -18,17 +18,21 @@ export class BvFaqComponent implements OnInit {
   faTrash = faTrash;
   faPlusCircle = faPlusCircle;
 
+  modelFiltroFaq: string;
+
   bvFaq: BvFaq[];
 
   constructor(private faqService: FaqService) { }
 
   ngOnInit() {
+    //result api
     this.faqService.getFaq().subscribe(
       res => {
         this.bvFaq = res.results.sort(this.ordenar)
       });
   }
 
+  //função colocar em ordem crescente
   ordenar (a, b) {
     if (a.position > b.position) {
       return 1;
@@ -39,5 +43,26 @@ export class BvFaqComponent implements OnInit {
       return 0;
     }
   }
+
+  //função deletar questão
+  deletar(faq: BvFaq) {
+    const posicao = this.bvFaq.indexOf(faq);
+    this.bvFaq.splice(posicao, 1);
+  }
+
+  //função filtro input buscar
+  buscar() {
+    if (!this.modelFiltroFaq) {
+      return this.bvFaq;
+    } 
+
+    return this.bvFaq.filter((faq) => {
+      return faq.question.toLowerCase().includes(this.modelFiltroFaq.toLowerCase());
+    });
+  }
+
+
+
+
 }
 

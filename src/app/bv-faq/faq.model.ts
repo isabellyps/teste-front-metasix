@@ -1,3 +1,4 @@
+//model retorno
 export interface BvFaq {
     objectId: string;
     position: number;
