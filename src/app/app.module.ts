@@ -12,7 +12,7 @@ import { BvCategoriasComponent } from './bv-categorias/bv-categorias.component';
 import { BvLocaisComponent } from './bv-locais/bv-locais.component';
 import { BvHomeComponent } from './bv-home/bv-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BvFaqEditarComponent } from './bv-faq-editar/bv-faq-editar.component';
+import { BvFaqGerenciarComponent } from './bv-faq-gerenciar/bv-faq-gerenciar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { BvFaqEditarComponent } from './bv-faq-editar/bv-faq-editar.component';
     BvCategoriasComponent,
     BvLocaisComponent,
     BvHomeComponent,
-    BvFaqEditarComponent
+    BvFaqGerenciarComponent
   ],
   imports: [
     BrowserModule,

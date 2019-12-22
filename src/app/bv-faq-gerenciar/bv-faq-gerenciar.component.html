@@ -1,7 +1,7 @@
-<h2>Editar Faq</h2>
+<h2>{{urlCriacao() ? 'Criar' : 'Editar'}} FAQ</h2>
 
 <div>
-    <label for="objectId">Id: 
+    <label for="objectId" *ngIf="!urlCriacao()">Id: 
         <input type="text" placeholder="Id" [(ngModel)]="faq.objectId" id="objectId" disabled>
     </label>
     <br>
@@ -29,5 +29,6 @@
         <input type="text" [(ngModel)]="faq.visible" id="visible">
     </label>
     <br>
-    <button type="button" class="btn btn-success" >Editar</button>
+    <button type="button" class="btn btn-primary">Salvar</button>
+    <button type="button" class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
 </div>

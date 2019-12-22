@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BvFaq } from '../bv-faq/faq.model';
 
 @Component({
-  selector: 'app-bv-faq-editar',
-  templateUrl: './bv-faq-editar.component.html',
-  styleUrls: ['./bv-faq-editar.component.scss']
+  selector: 'app-bv-faq-gerenciar',
+  templateUrl: './bv-faq-gerenciar.component.html',
+  styleUrls: ['./bv-faq-gerenciar.component.scss']
 })
-export class BvFaqEditarComponent implements OnInit {
+export class BvFaqGerenciarComponent implements OnInit {
 
-  //instancia variável com valor null
+  //instancia variável faq com propriedades nula
   faq: BvFaq = {
     answer: null,
     approved: null,
@@ -22,11 +22,16 @@ export class BvFaqEditarComponent implements OnInit {
     visible: null
   };
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
+    //verificar se rota de editar possui objeto faq
+    if(!this.urlCriacao() && !this.router.url.includes('objectId')) {
+      this.router.navigate(['/faq']);
+      
+    }
   }
 
-  //atualiza os valores da variável do faq que será editado
   ngOnInit() {
+    //atualiza os valores da variável do faq que será editado
     this.route.queryParamMap.subscribe(params => {
       this.faq.objectId = params.get('objectId');
       this.faq.approved = params.get('approved') == 'true';
@@ -36,5 +41,13 @@ export class BvFaqEditarComponent implements OnInit {
       this.faq.question = params.get('question');
       this.faq.visible = params.get('visible') == 'true';
     });
+  }
+
+  urlCriacao(){
+    return this.router.url.includes('criar');
+  }
+
+  cancelar() {
+    this.router.navigate(['/faq']);
   }
 }

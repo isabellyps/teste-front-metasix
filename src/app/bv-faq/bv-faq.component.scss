@@ -5,8 +5,8 @@ div {
     padding: 0px 22px 0px 22px;
 
     h2 {
-    font-size: 19px;
-    font-weight: bold;
+        font-size: 19px;
+        font-weight: bold;
     }
 
     .buscar {
@@ -24,7 +24,6 @@ div {
         font-weight: bold;
         font-style: italic;
         display: inline-flex;
-        width: 219px;
     
         ::-webkit-input-placeholder {
             color:$corborda;
@@ -58,46 +57,62 @@ div {
     width: 95%;
     margin-left: 27px;
     border-collapse: separate;
+    border-spacing: 1px 8px;
+    margin-top: -8px;
     
-
     thead {
         background-color: $corazul;
         color: $corbranco;
         font-size: 13px;
+
     }
 
     th {
         padding: 4px 15px 4px 15px;
-    }
 
+    }
+  
     td {
         background-color: $corbranco;
         padding: 5px 15px 5px 15px;
-        border: none;
-        border-radius: 2px;
-        box-shadow: $corborda 0px 0px 0px 0.5px;
+        border-radius: 3px;
+        //box-shadow: $corborda 0px 0px 0px 0.5px;
         font-size: 12px;
+        border-left-width: 0;
+        height: 18px;
+        border-bottom: inset;
+        border-left-style: outset;
+        border-top-style: outset;
+        //outset
     }
+
+    td:first-child {
+        border-left-width: 1px;
+      }
 
     span {
         float: right;
     }
 
+    .criar-btn {
+        border: none;
+        background-color: $corazul;
+        text-align: center;
+        color: $corbranco;
+        font-weight: bold;
+    }
+
     .editar {
         color: $corazul;
-        position: center;
-        text-align: center;
     }
 
     .deletar {
         color: $corvermelho;
-        position: center;
     }
 
     .deletar-btn, .editar-btn {
         border: none;
         background-color: $corbranco;
-        text-align: center;
     }
 
     .ordem {

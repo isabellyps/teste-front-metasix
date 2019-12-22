@@ -4,6 +4,11 @@
     width: auto;
     background-color: $corazul;
     height: 90px;
+
+    .row {
+        margin-right: 0px;        
+
+    }
     .logo {
         display: inline-flex;
         img {
@@ -21,28 +26,29 @@
         text-align: center;
         position: relative;
     }
+
     .logout {
         padding: 15px 0px 15px 0px;
         color: $corbranco;
         text-align: center;
         position: relative;
     } 
+    
+    .modulo, .logout :hover {
+        cursor: pointer;
+      }
 }
 
-.modulo, .logout :hover {
-    cursor: pointer;
-  }
 
 
 nav {
     margin: 35px auto;
     padding-left: 30px;
     font-size: 12px;
-
 }
     .menu-principal__lista {
         padding: 0;
-        display: -webkit-flex;
+        display: inline-flex;
         list-style: none;
     }
 

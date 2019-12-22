@@ -10,6 +10,7 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class BvHeaderComponent implements OnInit {
 
+  //variáveis icones
   faTh = faTh;
   faSignOutAlt = faSignOutAlt;
 

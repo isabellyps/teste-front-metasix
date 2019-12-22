@@ -14,19 +14,22 @@ import { Router } from '@angular/router';
 })
 export class BvFaqComponent implements OnInit {
 
+  //variáveis icones
   faSearch = faSearch;
   faEdit = faEdit;
   faTrash = faTrash;
   faPlusCircle = faPlusCircle;
 
+  //variável armazenar o escrito no input
   modelFiltroFaq: string;
 
+  //declarando array FAQ
   bvFaq: BvFaq[];
 
   constructor(private faqService: FaqService, private router: Router) { }
 
   ngOnInit() {
-    //result api
+    //retorno api
     this.faqService.getFaq().subscribe(
       res => {
         this.bvFaq = res.results.sort(this.ordenar)
@@ -45,13 +48,13 @@ export class BvFaqComponent implements OnInit {
     }
   }
 
-  //função deletar questão
+  //deletar questão
   deletar(faq: BvFaq) {
     const posicao = this.bvFaq.indexOf(faq);
     this.bvFaq.splice(posicao, 1);
   }
 
-  //função filtro input buscar
+  //filtro input buscar
   buscar() {
     if (!this.modelFiltroFaq) {
       return this.bvFaq;
@@ -62,9 +65,14 @@ export class BvFaqComponent implements OnInit {
     });
   }
 
-  //função para editar - passa bvfaq para a rota
-  editar (faq: BvFaq) {
+  //passa bvfaq para a rota
+  editar(faq: BvFaq) {
     this.router.navigate(['/faq/editar'], { queryParams: faq });
   }
+
+  criar() {
+    this.router.navigate(['/faq/criar']);
+  }
+
 }
 
